@@ -11,4 +11,4 @@ jobs:
       - name: Test
         uses: actions/checkout@v1
       - name: Build and Test
-        run:  xcodebuild test -project TestGitActions.xcodeproj -scheme TestGitActions -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.3'
+        run:  xcodebuild test -project TestGitActions.xcodeproj -scheme TestGitActions
