@@ -15,8 +15,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build
       run: |
+      cd TestGitActions
       xcodebuild clean build -project "TestGitActions.xcproject" -scheme "TestGitActions" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
-        
-    - name: Run tests
-      run:  |
-      xcodebuild clean test -project "TestGitActions.xcproject" -scheme "TestGitActionsTests" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
